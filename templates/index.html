@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> 
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename = './css/styles.css')}}"> 
+
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-info-container">
+           <h1 class="title">login in with</h1>
+           <div class="social-login">
+               <div class="social-login-element">
+                   <img src="{{ url_for ('static', filename = './imagen/google.svg')}}" alt="google-image">
+                   <span>Google</span>
+               </div>
+               <div class="social-login-element">
+                <img src="{{ url_for ('static',  filename = './imagen/facebook.svg')}}" alt="facebook-image">
+                <span>Facebook</span>
+            </div>
+           </div>
+           <p>or</p>
+           <form class="inputs-container" action ="/login" method="post">
+            <input class="input" type="text" name="username" placeholder="username" required>
+            <input class="input" type="text" name="userpassword" placeholder="password" required>
+            <p>Forgot password? <span class="span">Click here</span></p>
+            <button class="btn">login</button>
+            <span> Don't have an a account? <a  class="span" href="{{ url_for('register') }}" >Sign up</a></span>
+           </form>
+        </div>
+        <img class="image-container" src="{{url_for ('static', filename = './imagen/8b093b8aca4c3e7a3a2d43bf66870a55.jpg')}}" alt="login">
+    </div>
+
+
+    <div class="alerts" >
+        {% with messages = get_flashed_messages(with_categories=True) %}
+                {% if messages %}
+
+                        {% for category, message in messages %}
+  
+                        <div class="alert alert-{{ category }}" role="alert">
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            {{ message }} 
+                        </div>
+
+                        {% endfor %}
+                {% endif %}
+        {% endwith %}
+
+    </div>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>    
+</body>
+</html>

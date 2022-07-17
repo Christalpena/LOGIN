@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> 
+
+    <link rel="stylesheet" href="{{url_for('static', filename= './css/register.css')}}">
+
+    <title>Login page</title>
+</head>
+<body>
+    <form class="register_container" action="/signup" method="post">
+        <div class="login-info-container">
+            <h1 class="title"> CREATE AN ACCOUNT</h1>
+            <div class="inputs">
+                <input  class="input" type="name" name="name" placeholder="username" required>
+                <input  class="input" type="text" name="Last name" placeholder="Last name" required>
+                <input  class="input" type="gmail" name="gmail" placeholder="gmail" required>
+                <input class="input" type="password" name="password" placeholder="password" required>
+                <button class="btn">signup</button>
+            </div>
+        </div>
+    </form>
+    <img class="imag-container" src="https://i.pinimg.com/originals/9f/c2/12/9fc2126eec2c0a3876e3f2097af9b983.gif" alt="register">
+
+    <div class="alerts" >
+        {% with messages = get_flashed_messages(with_categories=True) %}
+                {% if messages %}
+
+                        {% for category, message in messages %}
+
+                        <div class="alert alert-{{ category }}" role="alert">
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            {{ message }} 
+                        </div>
+
+                        {% endfor %}
+                {% endif %}
+        {% endwith %}
+
+    </div>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>    
+</body>
+</html>
+

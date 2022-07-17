@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root{
+    --login-bg: #f8f3ff;
+    --title-bg: #5659ff;
+    --button-bg: #284dc7;
+    --light-pink: #e882e8;
+    --image-bg: #eadbff;
+}
+
+body{
+    height: 200%;
+    font-family: 'poppins',sans-serif;
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-abstracto-diseno-plano-formas-coloridas_23-2149110491.jpg?w=2000');
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    
+}    
+
+.register_container{
+
+    height: 30em;
+    width: 25em;
+    background-color: var(--login-bg);
+    border-radius: 15px;
+    position: fixed;
+    margin: 10% 10%;
+}
+
+.login-info-container{
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 100px;
+    background-color:var(--login-bg);
+    border-radius: 10px;
+
+}
+
+.input{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 43px;
+    width: 250px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    position: relative;
+    top: -45px;
+    font-weight: 600;
+
+
+}
+
+
+.btn{
+    width: 60%;
+    height: 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9800;
+    cursor: pointer;
+    position: relative;
+    top: -1em;
+    left: 60px;
+}
+
+.title{
+
+    text-transform: capitalize;
+    font-size: 1.99rem;
+    font-weight: 600;
+    color:var(--title-bg);
+    position: relative;
+    top: -70px;
+
+}
+
+.alerts{
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    position: relative;
+    top: 30px;
+}
+
+.imag-container{
+    width: 30%;
+    padding: 1rem;
+    background-color:#ff9800;
+    box-sizing: border-box;
+    position: absolute;
+    left: 30em;
+    top: 50%;
+}
+
+@media screen and (max-width: 1030px){
+    body{
+        background-repeat: repeat;
+    }
+
+    .alerts{
+        position:relative;
+        top: 8px;
+    }
+}
+
+@media screen and (max-width:681px){
+    .imag-container{
+        display: none;
+    }
+}

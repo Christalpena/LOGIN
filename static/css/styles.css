@@ -9,16 +9,17 @@
 }
 
 body{
-    height: 100vh;
+    height: 100%;
     font-family: 'poppins', sans-serif;
-    background-image: url("https://img.freepik.com/vector-gratis/fondo-minimalista-dibujado-mano_23-2149017896.jpg?w=2000");
+    background-image: url("https://www.educativa.com/ftp-servicios/blog/fondo-certificado-11.png");
+    background-size: 100%;
     background-repeat: no-repeat;
 
 }    
 
 .login-container{
-    height: 40em;
-    width: 60em;
+    height: 30em;
+    width: 50em;
     margin: 6em auto;
     display: flex;
     justify-content: space-between;
@@ -32,15 +33,16 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: top 0.5em;;
+    padding: top 0.5em;
     background-color: var(--login-bg);
 }
 
 .image-container{
    width: 50%;
-   padding: 2rem;
-   background-color: var(--image-bg);
+   padding: 1rem;
+   background-color:#ff9800;
    box-sizing: border-box;
+
 }
 
 .title{
@@ -49,24 +51,30 @@ body{
     font-weight: 600;
     letter-spacing: 1px;
     color: var(--title-bg);
+    position: relative;
+    top: 20px;
+
+
 }
 
 .social-login{
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-evenly;
   
 }
 
 .social-login-element{
-    width: 12.5rem;
-    height: 3.75rem;
+    width: 10.5rem;
+    height: 2.75rem;
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 0.5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: 19px;
 }
 .social-login-element:hover{
     border: 2px solid var(--button-bg);
@@ -88,14 +96,14 @@ body{
 }
 
 .login-info-container > p{
-    font-size: 1.25em;
-    margin-top: 1.5em;
+    font-size: 1.35em;
+    margin-top: 1em;
 
 }
 
 .inputs-container{
-    height: 50%;
-    width: 85%;
+    height: 60%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -142,7 +150,7 @@ body{
 }
 
 .span {
-    color: #284dc7;
+    color: #ff9800;
     font-weight: 600;
     cursor: pointer;
 }
@@ -181,3 +189,22 @@ body{
     margin: 0;
    }
 }
+
+@media screen and (max-width: 1030px){
+    body{
+        background-repeat: repeat;
+    }
+}
+
+.alerts{
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    position: relative;
+    top: -650px;
+}
+
+
+
+
